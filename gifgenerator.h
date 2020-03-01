@@ -26,7 +26,6 @@
 
 #include <stdlib.h>
 
-
 class GifGenerator : public QObject
 {
     Q_OBJECT
@@ -64,8 +63,6 @@ public:
         uint8_t chunk[256];   // bytes are written in here until we have 256 of them, then written to the file
     };
 
-
-
     explicit GifGenerator(QString gifPath, int width, int height, int delay = 40 ,QObject *parent = nullptr);
     ~ GifGenerator();
     bool init(QString gifPath);
@@ -102,7 +99,6 @@ private:
     QString m_gifPath;
     FILE* m_fpGif;
     uint8_t* m_oldImage;
-
 
 };
 
